@@ -1,13 +1,14 @@
-import Navbar from "../components/layout/Navbar";
+import Hero from "../sections/Hero"
+import Features from "../sections/Features"
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
 
-      <h1 style={{ textAlign: "center", marginTop: "100px" }}>
-        Welcome to NixCodex
-      </h1>
+      <Hero />
+
+      <Features />
+
     </main>
-  );
+  )
 }

@@ -1,44 +1,82 @@
+//platformun ne olduğunu anlatır
+
 export default function Features() {
   return (
-    <section className="py-24 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-24 px-6 bg-darkbg text-white">
 
-        <h2 className="text-3xl font-bold text-center mb-16">
-          Powerful Developer Tools
+      <div className="max-w-6xl mx-auto text-center">
+
+        <h2 className="text-4xl font-bold mb-6">
+          Everything Developers Need
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <p className="text-slate-400 mb-16">
+          NixCodex brings together tools, resources and projects
+          to help developers build faster.
+        </p>
 
-          <div className="p-8 rounded-xl bg-white shadow">
+        <div className="grid md:grid-cols-3 gap-10">
+
+          {/* CARD 1 */}
+
+          <div className="p-8 bg-slate-900/60 rounded-2xl border border-slate-800
+          hover:border-pinkaccent transition hover:-translate-y-1">
+
+            <div className="w-12 h-12 mb-4 rounded-lg 
+            bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500"></div>
+
             <h3 className="text-xl font-semibold mb-3">
-              ⚡ Fast Development
+              Developer Tools
             </h3>
-            <p className="text-gray-600">
-              Build projects faster with modern tools.
+
+            <p className="text-slate-400">
+              Discover useful tools that improve your workflow.
             </p>
+
           </div>
 
-          <div className="p-8 rounded-xl bg-white shadow">
+
+          {/* CARD 2 */}
+
+          <div className="p-8 bg-slate-900/60 rounded-2xl border border-slate-800
+          hover:border-blueaccent transition hover:-translate-y-1">
+
+            <div className="w-12 h-12 mb-4 rounded-lg 
+            bg-gradient-to-r from-blue-500 to-purple-500"></div>
+
             <h3 className="text-xl font-semibold mb-3">
-              📦 Code Libraries
+              Open Projects
             </h3>
-            <p className="text-gray-600">
-              Access reusable components and libraries.
+
+            <p className="text-slate-400">
+              Explore real world developer projects.
             </p>
+
           </div>
 
-          <div className="p-8 rounded-xl bg-white shadow">
+
+          {/* CARD 3 */}
+
+          <div className="p-8 bg-slate-900/60 rounded-2xl border border-slate-800
+          hover:border-purple-500 transition hover:-translate-y-1">
+
+            <div className="w-12 h-12 mb-4 rounded-lg 
+            bg-gradient-to-r from-pink-500 to-purple-500"></div>
+
             <h3 className="text-xl font-semibold mb-3">
-              🤝 Community
+              Learning Resources
             </h3>
-            <p className="text-gray-600">
-              Collaborate with developers worldwide.
+
+            <p className="text-slate-400">
+              Guides, tutorials and developer knowledge.
             </p>
+
           </div>
 
         </div>
 
       </div>
+
     </section>
   )
 }

@@ -1,0 +1,45 @@
+"use client";
+
+import { useState } from "react";
+
+export default function RegisterPage() {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleRegister = async () => {
+
+    await fetch("/api/register", {
+      method: "POST",
+      body: JSON.stringify({
+        email,
+        password
+      })
+    });
+
+    alert("User created");
+
+  };
+
+  return (
+    <div>
+
+      <h1>Register</h1>
+
+      <input
+        placeholder="email"
+        onChange={(e) => setEmail(e.target.value)}
+      />
+
+      <input
+        type="password"
+        onChange={(e) => setPassword(e.target.value)}
+      />
+
+      <button onClick={handleRegister}>
+        Register
+      </button>
+
+    </div>
+  );
+}

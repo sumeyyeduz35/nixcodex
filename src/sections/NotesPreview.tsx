@@ -1,4 +1,4 @@
-//bu bölümde developer notları sergilenir
+// bu bölümde developer notları sergilenir
 
 export default function NotesPreview() {
 
@@ -37,29 +37,67 @@ export default function NotesPreview() {
 
             <div
               key={index}
-              className="bg-slate-900/60 p-6 rounded-2xl border border-slate-800
-              hover:border-blueaccent transition hover:-translate-y-1"
+              className="
+              relative bg-slate-900/40 p-6 rounded-2xl border border-slate-800
+              transition-all duration-300
+              hover:border-blueaccent
+              group overflow-hidden
+              "
             >
 
-              {/* note icon */}
-              <div className="w-10 h-10 mb-4 rounded-lg
-              bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500"></div>
+              {/* subtle glow */}
+              <div className="
+              absolute inset-0 rounded-2xl
+              bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
+              opacity-0 blur-2xl transition duration-500
+              group-hover:opacity-10
+              " />
 
-              {/* badge */}
-              <span className="text-xs px-3 py-1 rounded-full
-              bg-blue-500/10 text-blue-400 border border-blue-500/20">
+              <div className="relative z-10">
 
-                Note
+                {/* badge */}
+                <span className="
+                text-xs px-3 py-1 rounded-full
+                bg-blue-500/10 text-blue-400 border border-blue-500/20
+                ">
+                  Note
+                </span>
 
-              </span>
+                {/* title */}
+                <h3 className="
+                text-xl font-semibold mt-4 mb-3
+                transition-all duration-300
+                group-hover:text-blue-400
+                ">
+                  {note.title}
+                </h3>
 
-              <h3 className="text-xl font-semibold mt-4 mb-3">
-                {note.title}
-              </h3>
+                {/* desc */}
+                <p className="text-slate-400 mb-6">
+                  {note.desc}
+                </p>
 
-              <p className="text-slate-400">
-                {note.desc}
-              </p>
+                {/* read more */}
+                <div className="relative inline-block">
+
+                  <span className="
+                  text-sm text-blue-400
+                  transition
+                  ">
+                    Read more →
+                  </span>
+
+                  {/* underline animation */}
+                  <span className="
+                  absolute left-0 -bottom-1 h-[2px] w-0
+                  bg-blue-400
+                  transition-all duration-300
+                  group-hover:w-full
+                  "></span>
+
+                </div>
+
+              </div>
 
             </div>
 

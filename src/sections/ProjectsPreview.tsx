@@ -1,4 +1,4 @@
-//bu bölümde  projeler sergilenir
+// bu bölümde projeler sergilenir
 
 export default function ProjectsPreview() {
 
@@ -40,28 +40,79 @@ export default function ProjectsPreview() {
 
             <div
               key={index}
-              className="bg-slate-900/60 p-6 rounded-2xl border border-slate-800
-              hover:border-pinkaccent transition hover:-translate-y-1"
+              className="
+              relative bg-slate-900/60 p-6 rounded-2xl border border-slate-800
+              transition-all duration-500 ease-out
+              hover:-translate-y-2 hover:scale-[1.02]
+              hover:border-purple-500/50
+              hover:shadow-[0_0_40px_rgba(124,58,237,0.3)]
+              group overflow-hidden
+              "
             >
 
-              {/* project icon */}
-              <div className="w-10 h-10 mb-4 rounded-lg
-              bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500"></div>
+              {/* Glow */}
+              <div className="
+              absolute inset-0 rounded-2xl
+              bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500
+              opacity-0 blur-2xl transition duration-500
+              group-hover:opacity-20
+              " />
 
-              <h3 className="text-xl font-semibold mb-3">
-                {project.title}
-              </h3>
+              <div className="relative z-10">
 
-              <p className="text-slate-400 mb-5">
-                {project.desc}
-              </p>
+                {/* ICON */}
+                <div className="
+                w-10 h-10 mb-4 rounded-lg
+                bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500
 
-              <span className="text-sm px-3 py-1 rounded-full
-              bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                transition-all duration-500
+                group-hover:rotate-6
+                group-hover:scale-110
+                "></div>
 
-                {project.tech}
+                {/* TITLE */}
+                <h3 className="
+                text-xl font-semibold mb-3
+                transition-all duration-300
+                group-hover:text-purple-400
+                ">
+                  {project.title}
+                </h3>
 
-              </span>
+                {/* DESC */}
+                <p className="text-slate-400 mb-5">
+                  {project.desc}
+                </p>
+
+                {/* TECH */}
+                <span className="
+                text-sm px-3 py-1 rounded-full
+                bg-purple-500/10 text-purple-400 border border-purple-500/20
+
+                transition-all duration-300
+                group-hover:bg-purple-500/20
+                group-hover:text-white
+                ">
+                  {project.tech}
+                </span>
+
+                {/* BUTTON */}
+                <div className="
+                mt-6 opacity-0 translate-y-4
+                transition-all duration-500
+                group-hover:opacity-100 group-hover:translate-y-0
+                ">
+
+                  <button className="
+                  text-sm text-purple-400
+                  hover:text-white transition
+                  ">
+                    View Project →
+                  </button>
+
+                </div>
+
+              </div>
 
             </div>
 

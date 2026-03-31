@@ -1,20 +1,37 @@
-//kullanıcıya aksiyon yaptırılan bölüm
+// kullanıcıya aksiyon yaptırılan bölüm
 
 export default function CTA() {
   return (
-    <section className="py-24 px-6 text-center text-white">
+    <section className="
+    relative py-28 px-6 text-center text-white
+    bg-transparent
+    ">
 
-      <h2 className="text-4xl font-bold mb-6">
-        Start Exploring NixCodex
-      </h2>
+      <div className="max-w-2xl mx-auto">
 
-      <p className="text-slate-400 mb-10">
-        Discover developer tools, projects and resources today.
-      </p>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          Start Exploring NixCodex
+        </h2>
 
-      <button className="bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-lg">
-        Get Started
-      </button>
+        <p className="text-slate-400 text-lg mb-10">
+          Discover developer tools, projects and resources today.
+        </p>
+
+        <button className="
+        px-10 py-4 rounded-xl
+        bg-gradient-to-r from-purple-600 to-pink-500
+        text-white font-medium
+
+        border border-white/10
+
+        transition-all duration-300
+        hover:scale-105
+        hover:shadow-[0_0_40px_rgba(168,85,247,0.6)]
+        ">
+          Get Started
+        </button>
+
+      </div>
 
     </section>
   )
